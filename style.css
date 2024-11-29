@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+ 
+#text {
+  text-shadow: 0 5px 5px #aaa;
+  font-size: 45px;
+  font-family: 'Poetsen One', cursive;  
+  top:250px;
+  width:340px;
+  margin:auto;
+  display:block;
+  word-break: break-all;
+  text-align: center;
+  color:#ff3399;
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px; 
+    display:block;
+    margin: 100px auto;
+    -webkit-animation: beat 0.7s ease 0s infinite normal;
+   -moz-animation: beat 0.7s ease 0s infinite normal;
+     animation: beat 0.7s ease 0s infinite normal;
+   
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #ff3399;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg); 
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+            transform-origin: 0 100%; 
+  -webkit-animation: glow 0.7s ease 0s infinite normal;
+     -moz-animation: glow 0.7s ease 0s infinite normal;
+          animation: glow 0.7s ease 0s infinite normal;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg); 
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%; 
+            transform-origin :100% 100%;
+         -webkit-animation: glow 0.7s ease 0s infinite normal;
+         -moz-animation: glow 0.7s ease 0s infinite normal;
+          animation: glow 0.7s ease 0s infinite normal;
+ 
+}
+@-webkit-keyframes glow {
+    0% {  -webkit-box-shadow:0 0 100px #ff3399;}
+    50% {  -webkit-box-shadow:0 0 200px #ff3399;}
+    100% {  -webkit-box-shadow:0 0 100px #ff3399;}
+}
+
+@-moz-keyframes glow {
+    0% {  -webkit-box-shadow:0 0 100px #ff3399;}
+    50% {  -webkit-box-shadow:0 0 200px #ff3399;}
+    100% {  -webkit-box-shadow:0 0 100px #ff3399;}
+}
+
+@keyframes glow {
+    0% {  box-shadow:0 0 100px #ff3399;}
+    50% {  box-shadow:0 0 200px #ff3399;}
+    100% {  box-shadow:0 0 100px #ff3399;}
+}
+@-webkit-keyframes beat {
+    0% {-webkit-transform: scale(1);    }
+    50% {-webkit-transform: scale(1.1) ; }
+    100% {-webkit-transform: scale(1)  ;}
+}
+@-moz-keyframes beat { 
+   0% {-webkit-transform: scale(1);  }
+    50% {-webkit-transform: scale(1.1) ; }
+    100% {-webkit-transform: scale(1)  ;}
+}
+@keyframes beat { 
+   0% {transform: scale(1);  }
+    50% {transform: scale(1.1) ; }
+    100% {transform: scale(1)  ;}
+}
